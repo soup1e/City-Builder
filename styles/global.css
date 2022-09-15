@@ -32,4 +32,40 @@ header .logo {
 
 main {
     padding: 20px;
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.pick-options {
+    display: grid;
+    gap: 15px;
+}
+
+.display-options {
+    display: grid;
+    gap: 10px;
+    justify-items: center;
+}
+
+.display-options img {
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border: 2px solid black;
+}
+
+.images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+select,
+option,
+input {
+    width: 200px;
+    height: 25px;
 }
