@@ -6,10 +6,13 @@ const climate = document.getElementById('select-climate');
 const architecture = document.getElementById('select-architecture');
 const attractionInput = document.getElementById('input-attraction');
 const addButton = document.getElementById('add-button');
+
 const cityDisplay = document.getElementById('city-display');
-const NameDisplay = document.getElementById('name-display');
+const nameDisplay = document.getElementById('name-display');
 const attractionList = document.getElementById('list-attraction');
 
+const climateImg = document.getElementById('image-climate');
+const architectureImg = document.getElementById('image-architecture');
 /* State */
 
 const city = {
@@ -26,24 +29,28 @@ cityName.addEventListener('input', () => {
 
 // EVENT LISTENER FOR CLIMATE
 climate.addEventListener('change', () => {
-    city.climate = climate.input;
+    city.climate = climate.value;
     displayCity();
 });
 
 // EVENT LISTENER FOR architecture
 architecture.addEventListener('change', () => {
-    city.architecture = architecture.input;
+    city.architecture = architecture.value;
     displayCity();
 });
 
-cityName.value = city.name;
-climate.value = city.climate;
-architecture.value = city.architecture;
+function display() {
+    cityName.value = city.name;
+    climate.value = city.climate;
+    architecture.value = city.architecture;
+}
 
 function displayCity() {
     cityDisplay.classList.value = '';
+    nameDisplay.textContent = city.name;
     cityDisplay.classList.add(city.climate, city.architecture);
-    NameDisplay.textContent = city.name;
+    climateImg.src = 'assets/options/' + city.climate + '.jpg';
+    architectureImg.src = 'assets/options/' + city.architecture + '.jpg';
 }
 
 /* Events */
@@ -61,14 +68,18 @@ function displayAttractions() {
 addButton.addEventListener('click', () => {
     const attraction = attractionInput.value;
     // No blank attractions
-    // if (attraction.value === '') {
-    //     return;
-    // }
+    if (attractionInput.value === '') {
+        return;
+    }
+
     city.attraction.push(attraction);
     displayAttractions();
+    attractionInput.value = '';
 });
+
 /* Display Functions */
 
 // (don't forget to call any display functions you want to run on page load!)
+display();
 displayCity();
 displayAttractions();
