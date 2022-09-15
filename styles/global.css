@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital@1&family=Open+Sans:ital,wght@1,300&family=Oswald:wght@300&family=Reem+Kufi+Fun:wght@600&display=swap');
 :root {
     --background: rgb(224, 234, 247);
     --header-background: rgb(254, 251, 245);
@@ -68,4 +69,16 @@ option,
 input {
     width: 100%;
     height: 25px;
+}
+
+.Oswald {
+    font-family: 'Oswald', sans-serif;
+}
+
+.opensans {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.reem {
+    font-family: 'Reem Kufi Fun', sans-serif;
 }

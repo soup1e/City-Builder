@@ -13,6 +13,8 @@ const attractionList = document.getElementById('list-attraction');
 
 const climateImg = document.getElementById('image-climate');
 const architectureImg = document.getElementById('image-architecture');
+
+const body = document.getElementById('body');
 /* State */
 
 const city = {
@@ -51,6 +53,7 @@ function displayCity() {
     cityDisplay.classList.add(city.climate, city.architecture);
     climateImg.src = 'assets/options/' + city.climate + '.jpg';
     architectureImg.src = 'assets/options/' + city.architecture + '.jpg';
+    displayFont();
 }
 
 /* Events */
@@ -76,10 +79,28 @@ addButton.addEventListener('click', () => {
     displayAttractions();
     attractionInput.value = '';
 });
+// CHANGE FONT ON architecture CHANGE
+function displayFont() {
+    if (city.architecture === 'Medieval') {
+        body.classList.add('Oswald');
+        body.classList.remove('opensans');
+        body.classList.remove('reem');
+    } else if (city.architecture === 'Modern') {
+        body.classList.add('reem');
+        body.classList.remove('opensans');
+        body.classList.remove('Oswald');
+    } else if (city.architecture === 'Futuristic') {
+        body.classList.add('opensans');
+        body.classList.remove('reem');
+        body.classList.remove('Oswald');
+    }
+}
 
+// CHANGE
 /* Display Functions */
 
 // (don't forget to call any display functions you want to run on page load!)
 display();
 displayCity();
 displayAttractions();
+displayFont();
