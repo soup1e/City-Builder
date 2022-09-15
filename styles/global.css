@@ -43,13 +43,13 @@ main {
     gap: 15px;
 }
 
-.display-options {
+#city-display {
     display: grid;
     gap: 10px;
     justify-items: center;
 }
 
-.display-options img {
+#city-display img {
     width: 100%;
     max-width: 400px;
     height: 100%;
