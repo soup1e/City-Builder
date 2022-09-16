@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital@1&family=Open+Sans:ital,wght@1,300&family=Oswald:wght@300&family=Reem+Kufi+Fun:wght@600&display=swap');
 :root {
     --background: rgb(224, 234, 247);
     --header-background: rgb(254, 251, 245);
@@ -32,4 +33,77 @@ header .logo {
 
 main {
     padding: 20px;
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.pick-options {
+    display: grid;
+    gap: 15px;
+}
+
+#city-display {
+    display: grid;
+    gap: 10px;
+    justify-items: center;
+}
+
+#city-display img {
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border: 2px solid black;
+}
+
+.images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+select,
+option,
+input {
+    width: 100%;
+    height: 25px;
+}
+
+.Oswald {
+    font-family: 'Oswald', sans-serif;
+}
+
+.opensans {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.reem {
+    font-family: 'Reem Kufi Fun', sans-serif;
+}
+
+.dry {
+    background: rgb(131, 58, 180);
+    background: linear-gradient(
+        152deg,
+        rgba(131, 58, 180, 1) 0%,
+        rgba(253, 29, 29, 1) 50%,
+        rgba(252, 176, 69, 1) 100%
+    );
+}
+
+.tropical {
+    background: rgb(34, 193, 195);
+    background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+}
+
+.beach {
+    background: rgb(238, 212, 174);
+    background: radial-gradient(circle, rgba(238, 212, 174, 1) 34%, rgba(27, 102, 190, 1) 100%);
+}
+
+.alaska {
+    background: rgb(63, 57, 157);
+    background: linear-gradient(138deg, rgba(63, 57, 157, 1) 0%, rgba(0, 212, 255, 1) 100%);
 }
