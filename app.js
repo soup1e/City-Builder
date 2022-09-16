@@ -54,6 +54,7 @@ function displayCity() {
     climateImg.src = 'assets/options/' + city.climate + '.jpg';
     architectureImg.src = 'assets/options/' + city.architecture + '.jpg';
     displayFont();
+    displayBackground();
 }
 
 /* Events */
@@ -95,7 +96,30 @@ function displayFont() {
         body.classList.remove('Oswald');
     }
 }
-
+// CHANGE BACKGROUND
+function displayBackground() {
+    if (city.climate === 'Tropical') {
+        body.classList.add('tropical');
+        body.classList.remove('climate');
+        body.classList.remove('beach');
+        body.classList.remove('alaska');
+    } else if (city.climate === 'Dry') {
+        body.classList.add('climate');
+        body.classList.remove('tropical');
+        body.classList.remove('beach');
+        body.classList.remove('alaska');
+    } else if (city.climate === 'Beach') {
+        body.classList.add('beach');
+        body.classList.remove('tropical');
+        body.classList.remove('climate');
+        body.classList.remove('alaska');
+    } else if (city.climate === 'Alaska') {
+        body.classList.add('alaska');
+        body.classList.remove('tropical');
+        body.classList.remove('climate');
+        body.classList.remove('beach');
+    }
+}
 // CHANGE
 /* Display Functions */
 
@@ -104,3 +128,4 @@ display();
 displayCity();
 displayAttractions();
 displayFont();
+displayBackground();
