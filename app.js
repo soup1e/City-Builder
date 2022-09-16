@@ -75,7 +75,6 @@ addButton.addEventListener('click', () => {
     if (attractionInput.value === '') {
         return;
     }
-
     city.attraction.push(attraction);
     displayAttractions();
     attractionInput.value = '';

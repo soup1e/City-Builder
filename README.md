@@ -1,3 +1,3 @@
 ## Planning document
 
-! [wireframe](assets\citysim.PNG)
+! [wireframe](citysim.PNG)
